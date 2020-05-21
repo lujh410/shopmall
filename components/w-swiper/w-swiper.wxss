@@ -1,0 +1,11 @@
+/* components/w-swiper/w-swiper.wxss */
+
+.swiper {
+  height: 360rpx;
+}
+
+/*image默认:320px*240px,需要修改100%*/
+.swiper-image {
+  width: 100%;
+  /* height: 100%; */
+}

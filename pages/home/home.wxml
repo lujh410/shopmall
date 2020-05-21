@@ -1,0 +1,22 @@
+<!--pages/home/home.wxml-->
+  <view hidden='{{!showTabControl}}'>
+    <w-tab-control class='tab-control-temp' 
+                 titles="{{titles}}" 
+                 bind:tabclick="tabClick"/>
+  </view>
+<!--1.展示轮播图-->
+<w-swiper images = "{{banners}}"/>
+<!--2.展示推荐，并排横放-->
+<w-recommend recommends="{{recommends}}" bind:imageLoad = "onImageLoad"/>
+<!--3.本周流行-->
+<w-feature />
+<!--4.tab-control-->
+<w-tab-control class="tab-control" titles="{{titles}}" bind:tabclick="tabclick"/>
+<!--5.商品显示-->
+<w-goods goodslist="{{goods[currenttype].list}}"/>
+<!--6.回到顶部-->
+<!--hidden对于自定义的组件是无效的-->
+<w-back-top wx:if = "{{showBackTop}}" />
+
+
+

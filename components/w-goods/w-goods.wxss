@@ -1,0 +1,11 @@
+/* components/w-goods/w-goods.wxss */
+.goods{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly; /*平分空白部分，实现水平平均间隔*/
+}
+.goods > .item{
+  width: 47%;
+  /*padding-left: 1%;*/
+  position: relative; /*必须设定为相对定位与子组件配合显示*/
+}

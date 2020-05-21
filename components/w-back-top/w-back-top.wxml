@@ -1,0 +1,2 @@
+<!--components/w-back-top/w-back-top.wxml-->
+<image src='/assets/images/common/top.png' class='goTop' bindtap="goTop"></image>

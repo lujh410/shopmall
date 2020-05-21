@@ -1,0 +1,10 @@
+/* pages/home/home.wxss */
+
+.tab-control-temp {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 9;
+  background: #fff;
+}

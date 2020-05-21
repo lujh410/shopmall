@@ -1,0 +1,47 @@
+.goods-item {
+  /* width: 200rpx; */
+  text-align: center;
+  color: #555;
+  padding-bottom: 85rpx;
+  
+}
+.image {
+  width: 100%;   /*自动缩放，以利全部显示*/
+  border-radius: 10rpx;  /*小圆角边框*/
+}
+
+.title {
+  white-space: nowrap; /*不换行*/
+  overflow: hidden;  /*超过的内容不显示*/
+  text-overflow: ellipsis;  /*省略号...*/
+  font-size: 28rpx;
+}
+.info{
+  font-size: 28rpx;
+  white-space: nowrap;
+  overflow: hidden;  /*超过的内容不显示*/
+  text-overflow: ellipsis;  /*省略号...*/
+}
+.info .price {
+  color: #ff5777;
+  /* padding-right: 10rpx; */
+}
+.info .icon {
+  width: 30rpx;
+  height: 30rpx;
+  padding: 0 6rpx 0 10rpx;
+  position: relative;
+  top:4rpx;
+}
+.cfav {
+  /* padding-left: 10rpx; */
+  position: relative;
+}
+.desc-info {
+  position: absolute;   
+  /*绝对定位，防止图片大小不一，显示文字信息不对齐，强制设定信息内容显示在底部，与 home内的position: relative配合使用 */
+  left: 0;
+  right: 0;
+  bottom: 5rpx;
+}
+

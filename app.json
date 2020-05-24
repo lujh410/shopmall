@@ -1,10 +1,12 @@
 {
   "pages":[
-    "pages/index/index",
     "pages/home/home",
     "pages/category/category",
     "pages/cart/cart",
-    "pages/profile/profile"
+    "pages/profile/profile",
+    "pages/login/login",
+    "pages/register/register",
+    "pages/temp/temp"
   ],
   "tabBar": {
     "selectedColor": "#ff5777",

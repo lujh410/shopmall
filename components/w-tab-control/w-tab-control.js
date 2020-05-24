@@ -7,6 +7,10 @@ Component({
     titles: {
       type: Array,
       value: []
+    },
+    currentIndex:{
+      type:Number,
+      value:0
     }
   },
 
@@ -14,7 +18,7 @@ Component({
    * 组件的初始数据
    */
   data: {
-    currentIndex: 0
+ 
   },
 
   /**
@@ -27,7 +31,7 @@ Component({
         currentIndex: e.currentTarget.dataset.index
       })
 
-      // 2.发出时间
+      // 2.发出事件
       const data = {index: this.data.currentIndex}
       this.triggerEvent("tabclick", data, {})
     },

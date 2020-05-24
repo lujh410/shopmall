@@ -9,3 +9,6 @@
   /*padding-left: 1%;*/
   position: relative; /*必须设定为相对定位与子组件配合显示*/
 }
+.swiper_container{
+ height: 100vmax;
+}

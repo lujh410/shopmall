@@ -1,0 +1,15 @@
+{
+  "name": "shopmall",
+  "version": "1.0.0",
+  "main": "app.js",
+  "dependencies": {
+    "apifm-wxapi": "^3.8.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

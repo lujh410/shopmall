@@ -1,0 +1,46 @@
+/* pages/login/login.wxss */
+
+.container {
+  height: 100%;
+  overflow: auto;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-image: url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1590062853805&di=62827fdd17164bc016e39381685b7867&imgtype=0&src=http%3A%2F%2Fpic3.16pic.com%2F00%2F03%2F13%2F16pic_313574_b.jpg");
+}
+.header{
+  width: 80rpx;
+  height: 80rpx;
+  border: solid red 2px;
+  border-radius: 50%;
+  background-color: royalblue;
+  margin: 100rpx auto;
+  display: block;
+}
+.login-panel{
+  margin: 0 auto;
+  width: 500rpx;
+  height: 500rpx;
+  display: flex;
+  flex-direction: column;
+}
+.login-panel  > view{
+  flex: 1;
+  display: flex;
+  margin: 10rpx 0;
+  color: black;
+}
+.password,
+.account{
+  border-bottom: tomato 1px solid;
+  flex: 1;
+  margin-left: 20rpx;
+}
+.spacebetween{
+  justify-content: space-between;
+}
+.registerBtn,
+.loginBtn{
+  width: 50rpx;
+  left: 0;
+  border-radius: 40rpx;
+}

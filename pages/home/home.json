@@ -5,7 +5,8 @@
     "w-feature":"./childCpns/w-feature/w-feature",
     "w-tab-control":"/components/w-tab-control/w-tab-control",
     "w-goods":"/components/w-goods/w-goods",
-    "w-back-top":"/components/w-back-top/w-back-top"
+    "w-back-top":"/components/w-back-top/w-back-top",
+    "w-swiper-goods":"/components/w-swiper-goods/w-swiper-goods"
   },
   "navigationBarTitleText": "静远小店-首页"
 }

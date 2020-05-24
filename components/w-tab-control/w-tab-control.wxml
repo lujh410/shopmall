@@ -3,7 +3,8 @@
   <block wx:for="{{titles}}" wx:key="index">
     <view class='tab-item {{index == currentIndex?"active": ""}}'
           bind:tap="itemClick" 
-          data-index="{{index}}">
+          data-index="{{index}}"> 
+          <!-- data-index属性：用于后台事件获取的时候可以用index来区分是哪个 -->
       <text>{{item}}</text>
     </view>
   </block>

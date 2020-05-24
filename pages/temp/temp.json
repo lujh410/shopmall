@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "w-movecell":"/components/w-movecell/w-movecell"
+  }
+}

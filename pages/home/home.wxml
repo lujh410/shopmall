@@ -2,7 +2,8 @@
   <view hidden='{{!showTabControl}}'>
     <w-tab-control class='tab-control-temp' 
                  titles="{{titles}}" 
-                 bind:tabclick="tabClick"/>
+                 currentIndex="{{currentIndex}}"
+                 bind:tabclick="tabclick"/>
   </view>
 <!--1.展示轮播图-->
 <w-swiper images = "{{banners}}"/>
@@ -11,9 +12,12 @@
 <!--3.本周流行-->
 <w-feature />
 <!--4.tab-control-->
-<w-tab-control class="tab-control" titles="{{titles}}" bind:tabclick="tabclick"/>
+<w-tab-control class="tab-control" titles="{{titles}}" currentIndex="{{currentIndex}}"
+               bind:tabclick="tabclick"/>
 <!--5.商品显示-->
-<w-goods goodslist="{{goods[currenttype].list}}"/>
+<w-goods id = "goods_id" goodslist="{{goods[currenttype].list}}" goodstype="{{titles}}"/>
+<!-- <w-swiper-goods id = "goods_id" goods="{{goods}}" currentIndex="{{currentIndex}}" swiper_height="{{swiper_height}}"
+                bind:swiperchange="tabclick"/> -->
 <!--6.回到顶部-->
 <!--hidden对于自定义的组件是无效的-->
 <w-back-top wx:if = "{{showBackTop}}" />

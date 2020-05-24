@@ -1,0 +1,13 @@
+<!--components/w-swiper-goods/w-swiper-goods.wxml-->
+<swiper style="height:{{swiper_height}}rpx"
+        circular
+        interval = "3000"
+        duration = "300"
+        current = "{{currentIndex}}"
+        bindchange="handlerswiper">
+  <block wx:for = "{{goods}}" wx:key="index">
+  <swiper-item>
+    <w-goods goodslist="{{item.list}}"/>
+  </swiper-item>
+  </block>
+</swiper>

@@ -28,10 +28,12 @@ Page({
 
     },
     currenttype:[POP],
+    currentIndex:0,
     showBackTop:false,
     showTabControl:false,
     tabControlTop:0,
-    scrollPosition:600
+    scrollPosition:600,
+    swiper_height:3000
   },
 
   /**
@@ -126,6 +128,23 @@ Page({
    */
   onReachBottom: function () {
     this._getProductData(this.data.currenttype)
+    // setTimeout(this.changeheight ,1000)
+    //this.changeheight()
+    let systemInfo = wx.getSystemInfoSync()
+    console.log(systemInfo)
+    
+  },
+  changeheight(){
+    wx.createSelectorQuery().select('#goods_id').boundingClientRect((rect) =>{
+      console.log(rect)
+      var height = rect.bottom
+      if (this.data.swiper_height<=height){
+      this.setData({
+        swiper_height:height
+      })
+    }
+      //console.log(this.data.swiper_height)
+    }).exec()
   },
 
   /**
@@ -137,15 +156,16 @@ Page({
    /**
    * 处理事件监听------------------------------
    */
-  tabclick(e){  
+  tabclick(e){
     this.setData({
-      currenttype : this.data.titles[e.detail.index]
+      currenttype : this.data.titles[e.detail.index],
+      currentIndex:e.detail.index
     })
-
   },
 
     // 获取滚动条当前位置
     onPageScroll: function (e) {
+      //--------显示回到顶部控件------------------
       if (e.scrollTop > this.data.scrollPosition) {
         this.setData({
           showBackTop: true
@@ -163,6 +183,8 @@ Page({
             showTabControl: !show
           })}
       }).exec()
+
+     // this.changeheight()
     },
     //图片加载完成，获取tabbar的位置
     onImageLoad(){

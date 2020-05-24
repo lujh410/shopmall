@@ -7,6 +7,10 @@ Component({
     goodslist:{
       type:Object,
       value:[]
+    },
+    goodstype:{
+      type:Object,
+      value:[]
     }
   },
 
@@ -21,6 +25,6 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+   
   }
 })

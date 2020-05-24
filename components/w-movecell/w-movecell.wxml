@@ -1,0 +1,11 @@
+<!--components/w-movecell/w-movecell.wxml-->
+<view class="container">
+  <movable-area>
+    <movable-view direction="horizontal"
+                  bindtouchstart="handlerstart"
+                  bindtouchend="handlerend"
+                  x="{{isopen ?-100:0}}"></movable-view>
+  </movable-area>
+  <button class="mini-btn" type="warn" size="mini">删除</button>
+</view>
+

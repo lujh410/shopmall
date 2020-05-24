@@ -1,0 +1,24 @@
+/* components/w-movecell/w-movecell.wxss */
+.container{
+  width: 90%;
+  height: 90rpx;
+  background-color: rgb(231, 17, 171);
+  margin: 100rpx auto;
+  display: flex;
+}
+.container movable-area{
+  width: 80%;
+  height: 100%;
+  background-color: chartreuse;
+}
+.container movable-view{
+  width: 90vw;   /*屏幕90% */
+  height: 100%;
+  background-color:blue;
+  z-index: 2;
+}
+.container button{
+  flex: 1;
+  z-index: 1;
+}
+

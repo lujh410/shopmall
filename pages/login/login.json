@@ -1,0 +1,9 @@
+{
+  "usingComponents": {},
+
+  "backgroundTextStyle":"light",
+  "navigationBarBackgroundColor": "#ff5777",
+  "navigationBarTitleText": "静远小店",
+  "navigationBarTextStyle":"white"
+  
+}

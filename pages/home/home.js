@@ -1,4 +1,6 @@
 // pages/home/home.js
+const WXAPI = require('apifm-wxapi')
+const TOOLS = require('../../utils/tools.js')
 import {
   getMultiData,
   getProduct
@@ -11,6 +13,13 @@ import {
   BACK_TOP_POSITION
 } from '../../common/const.js'
 
+const APP = getApp()
+// fixed首次打开不显示标题的bug
+// APP.configLoadOK = () => {
+//   wx.setNavigationBarTitle({
+//     title: wx.getStorageSync('mallName')
+//   })
+// }
 Page({
 
   /**
@@ -48,10 +57,41 @@ Page({
    */
     // 网络请求相关方法
     _getData() {
-      this._getMultiData(); // 获取上面的数据
+      //this._getMultiData(); // 获取上面的数据
+      this.initBanners()
+      this.getNotice()
       this._getProductData(POP);
       this._getProductData(NEW);
       this._getProductData(SELL);
+    },
+    //获取轮播图
+    async initBanners(){
+      const _data = {}
+      // 读取头部轮播图
+      const res1 = await WXAPI.banners({
+        type: 'index'
+      })
+      if (res1.code == 700) {
+        wx.showModal({
+          title: '提示',
+          content: '请在后台添加 banner 轮播图片，自定义类型填写 index',
+          showCancel: false
+        })
+      } else {
+        _data.banners = res1.data
+      }
+      this.setData(_data)
+    },
+    //获取信息公告
+    getNotice: function() {
+      var that = this;
+      WXAPI.noticeList({pageSize: 5}).then(function (res) {
+        if (res.code == 0) {
+          that.setData({
+            noticeList: res.data
+          });
+        }
+      })
     },
   _getMultiData(){
       //1.请求轮播图和推荐的数据

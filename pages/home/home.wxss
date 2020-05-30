@@ -8,3 +8,39 @@
   z-index: 9;
   background: #fff;
 }
+.notice-box {
+  display: flex;
+  box-sizing: border-box;
+  width: 100vw;
+  height: 88rpx;
+  line-height: 88rpx;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 32rpx;
+  border-bottom: 1rpx solid #efeff4;
+}
+.notice{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 600rpx;
+}
+.notice_icon {
+  margin-left:20rpx;
+  width:30rpx;
+  height:30rpx;
+}
+.notice_swiper{
+  height: 88rpx;
+  width: 600rpx;
+}
+.notice_itemr {
+  padding-left: 16rpx;
+  font-size: 24rpx;
+  overflow: hidden;
+  color: #e64340;
+}
+.notice-box .more {
+  color: #666;
+  font-size: 24rpx;
+}

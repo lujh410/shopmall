@@ -1,12 +1,18 @@
 {
-  "pages":[
+  "pages": [
     "pages/home/home",
     "pages/category/category",
-    "pages/cart/cart",
-    "pages/profile/profile",
+    "pages/my/index",
+    "pages/goods-details/goods-details",
     "pages/login/login",
+    "pages/shop-cart/shop-cart",
+    "pages/notice/notice",
+    "pages/notice/show",
     "pages/register/register",
-    "pages/temp/temp"
+    "pages/temp/temp",
+    "template/login/index",
+    "pages/cart/cart",
+    "pages/to-pay-order/index"
   ],
   "tabBar": {
     "selectedColor": "#ff5777",
@@ -24,25 +30,34 @@
         "selectedIconPath": "/assets/images/tabbar/category_active.png"
       },
       {
-        "pagePath": "pages/cart/cart",
+        "pagePath": "pages/shop-cart/shop-cart",
         "text": "购物车",
         "iconPath": "/assets/images/tabbar/cart.png",
         "selectedIconPath": "/assets/images/tabbar/cart_active.png"
       },
       {
-        "pagePath": "pages/profile/profile",
+        "pagePath": "pages/my/index",
         "text": "我的",
         "iconPath": "/assets/images/tabbar/profile.png",
         "selectedIconPath": "/assets/images/tabbar/profile_active.png"
       }
-  ]
+    ]
   },
-
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#ff5777",
     "navigationBarTitleText": "静远小店",
-    "navigationBarTextStyle":"white"
+    "navigationBarTextStyle": "white"
+  },
+  "usingComponents": {
+    "float-menu": "/components/float-menu/index",
+    "parser":"/components/parser.20200414.min/parser",
+    "van-notice-bar": "@vant/weapp/notice-bar/index",
+    "van-search": "@vant/weapp/search/index",
+    "van-divider": "@vant/weapp/divider/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-count-down": "@vant/weapp/count-down/index",
+    "van-button": "@vant/weapp/button/index"
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

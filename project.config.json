@@ -3,10 +3,12 @@
 	"packOptions": {
 		"ignore": []
 	},
+	"cloudfunctionRoot": "cloudfunction/",
 	"setting": {
 		"urlCheck": false,
 		"es6": true,
-		"postcss": true,
+		"enhance": true,
+		"postcss": false,
 		"preloadBackgroundData": false,
 		"minified": true,
 		"newFeature": true,
@@ -23,7 +25,8 @@
 			"disablePlugins": [],
 			"outputPath": ""
 		},
-		"enhance": true
+		"useCompilerModule": false,
+		"userConfirmedUseCompilerModuleSwitch": true
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.11.0",
@@ -35,6 +38,7 @@
 	"isGameTourist": false,
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
+	"cloudfunctionTemplateRoot": "cloudfunctionTemplate",
 	"condition": {
 		"search": {
 			"current": -1,
@@ -70,6 +74,41 @@
 					"id": -1,
 					"name": "temp",
 					"pathName": "pages/temp/temp",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/profile/profile",
+					"pathName": "pages/profile/profile",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 3,
+					"name": "pages/goods-details/goods-details",
+					"pathName": "pages/goods-details/goods-details",
+					"query": "id= 433364&inviter_id=456",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop-cart/shop-cart",
+					"pathName": "pages/shop-cart/shop-cart",
+					"query": "id= 433345&inviter_id=456",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/cart/cart",
+					"pathName": "pages/cart/cart",
+					"query": "id= 433345&inviter_id=456",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop-cart/shop-cart",
+					"pathName": "pages/shop-cart/shop-cart",
 					"scene": null
 				}
 			]

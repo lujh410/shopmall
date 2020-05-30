@@ -1,1 +1,83 @@
 /* pages/temp/temp.wxss */
+.footer-box{
+  position: fixed;
+  display: flex;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100rpx;
+  align-items: center;
+  box-shadow:0 0 1rpx 0 ;
+}
+.footer-box image{
+  width: 55rpx;
+  height: 55rpx;
+}
+
+.contact {
+  background-color: cadetblue;
+  position: relative;
+  height: 60rpx;
+  width: 60rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 32rpx;
+}
+.contact button {
+  /* 利用position:absolute重叠元素 */
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  /* z-index: 99; */
+}
+.contact image {
+  width: 60rpx;
+  height: 60rpx;
+  /* z-index:1; */
+}
+.footer-box .shop-cart-btn {
+  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 32rpx;
+}
+
+.footer-box .shop-cart-btn .shop-num{
+  position: absolute;
+  color:#fff;
+  left: 32rpx;
+  top:10rpx;
+
+  width: 40rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  text-align: center;
+  border-radius: 50%;
+  background: #e64340;
+  font-size: 24rpx;
+}
+.footer-box .fav-icon{
+  margin-left: 32rpx;
+}
+.footer-box .join-shop-cart{
+  margin-left: 32rpx;
+  font-size: 34rpx;
+  background-color: #ff6850;
+  height: 100%;
+  flex: 1;
+  text-align: center;
+  color: #fff;
+  line-height: 100rpx;
+}
+.footer-box .now-buy{
+  font-size: 34rpx;
+  background-color: #e64340;
+  height: 100%;
+  flex: 1;
+  text-align: center;
+  color: #fff;
+  line-height: 100rpx;
+}

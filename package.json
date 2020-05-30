@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "app.js",
   "dependencies": {
-    "apifm-wxapi": "^3.8.0"
+    "apifm-wxapi": "^3.8.0",
+    "wx-server-sdk": "^2.0.4"
   },
   "devDependencies": {},
   "scripts": {

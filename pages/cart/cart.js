@@ -1,18 +1,48 @@
 // pages/cart/cart.js
+const WXAPI = require('apifm-wxapi')
+const TOOLS = require('../../utils/tools.js')
+const AUTH = require('../../utils/auth')
+
+const app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    wxlogin: true,
 
+    saveHidden: true,
+    allSelect: true,
+    noSelect: false,
+    shippingCarInfo:"",
+
+    delBtnWidth: 120, //删除按钮宽度单位（rpx）
+    shippingCarInfo:""
   },
-
+  async shippingCarInfo(){
+    const token = wx.getStorageSync('token')
+    if (!token) {
+      return
+    }
+    const res = await WXAPI.shippingCarInfo(token)
+    if (res.code == 0) {
+      this.setData({
+        shippingCarInfo: res.data
+      })
+    
+    } else {
+      this.setData({
+        shippingCarInfo: null
+      })
+    }
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.shippingCarInfo()
+    TOOLS.showTabBarBadge()
   },
 
   /**

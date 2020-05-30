@@ -8,10 +8,33 @@
 <!--1.展示轮播图-->
 <w-swiper images = "{{banners}}"/>
 <!--2.展示推荐，并排横放-->
-<w-recommend recommends="{{recommends}}" bind:imageLoad = "onImageLoad"/>
+<!-- <w-recommend recommends="{{recommends}}" bind:imageLoad = "onImageLoad"/> -->
+<!-- 信息公告栏 -->
+<view class="notice-box" wx:if="{{noticeList}}">
+  <view class="notice">
+    <image class="notice_icon" src="/assets/images/common/notice.png"></image>
+    <swiper class="notice_swiper" vertical autoplay circular>
+      <navigator wx:for="{{noticeList.dataList}}" wx:key="id" url="/pages/notice/show?id={{item.id}}">
+        <swiper-item>
+          <view class="notice_itemr">{{item.title}}</view>
+        </swiper-item>
+      </navigator>
+    </swiper>
+  </view>
+  <view class="more"><navigator url="/pages/notice/notice">更多 ></navigator></view>
+</view>
 <!--3.本周流行-->
 <w-feature />
-<!--4.tab-control-->
+<!-- 4.商品分类 -->
+<view class="category-box">
+  <view class="category-list" wx:for="{{categories}}" wx:key="id">
+    <view class="category-column {{activeCategoryId == item.id ? 'type-item-on' : ''}}" bindtap="tabClick" id="{{item.id}}">
+      <image mode="aspectFill" class="category-imgbox" src="{{item.icon}}"></image>
+      <view class="category-title">{{item.name}}</view>
+    </view>          
+  </view>
+</view>
+<!-- 5.商品导航栏 -->
 <w-tab-control class="tab-control" titles="{{titles}}" currentIndex="{{currentIndex}}"
                bind:tabclick="tabclick"/>
 <!--5.商品显示-->

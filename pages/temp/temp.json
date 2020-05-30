@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "w-movecell":"/components/w-movecell/w-movecell"
+    "w-movecell":"/components/w-movecell/w-movecell",
+    "w-move-goods-car":"/components/w-move-goods-car/w-move-goods-car"
   }
 }

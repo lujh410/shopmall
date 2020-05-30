@@ -1,0 +1,49 @@
+<!--components/w-move-goods-car/w-move-goods-car.wxml-->
+        <!-- x="{{(currentIndex==index && isopen) ?-100:0}}" -->
+<block wx:for ="{{shippingCarInfo.items}}" wx:key ="index">
+<view class="container" >
+  <movable-area>
+    <movable-view direction="horizontal"
+                  bindtouchstart="handlerstart"
+                  bindtouchend="handlerend"
+                  x="{{xmove_list[item.key]}}"
+                  data-index ="{{item.key}}">
+      <view class="goods-info">
+          <view class="img-box">
+            <image mode="aspectFill" src="{{item.pic}}" class="img" />
+          </view>
+          <view class="text-box">
+            <view class="goods-title">{{item.name}}</view>
+            <view wx:if="{{item.sku}}" class="goods-label">
+              <block wx:for="{{item.sku}}" wx:for-item="option" wx:key="index">
+                {{option.optionName}}:{{option.optionValueName}}
+              </block>
+            </view>
+            <view class="goods-price">¥ {{item.price}}</view>
+            <view class="buy-num">
+              <view class="jian-btn" catchtap="jianBtnTap" data-index="{{index}}">-</view>
+              <input type="number" value="{{item.number}}" data-key="{{item.key}}" bindinput="changeCarNumber"/>
+              <view class="jia-btn {{item.number==curTouchGoodStore? 'disabled' : ''}}" catchtap="jiaBtnTap" data-index="{{index}}">+</view>
+            </view>
+            <image class="del-icon" src="/assets/images/common/del.png" data-key="{{item.key}}" catchtap="delItem"></image>
+          </view>
+        </view>
+        
+    </movable-view>
+  </movable-area>
+  <slot></slot>
+  <view class="delete-btn" data-key="{{item.key}}" catchtap="delItem">
+   删除
+  </view>
+</view>
+<!-- <view class="line"></view> -->
+ </block>
+  <view class="jiesuan-box">
+  <view class="left-price">
+   <!-- {{shippingCarInfo.score}} 积分 -->
+    <view class="total" hidden="{{noSelect}}">合计：¥ {{shippingCarInfo.price}}</view>
+  </view>
+  <view class="to-pay-btn">
+    <navigator url="/pages/pay-order/pay-order">去结算</navigator>
+  </view>
+</view>

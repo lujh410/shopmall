@@ -1,5 +1,7 @@
 <!--pages/login/login.wxml-->
-<view class="container">
+<button class = "getUserInfobtn" wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权登录</button>
+<view class="container" wx:if="{{isok}}">
+<button class = "getUserInfobtn" wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权登录</button>
   <image class="header" src="/assets/images/common/arrow-right.png"></image>
   <form bindsubmit="handlersubmit">
     <view class="login-panel">
@@ -26,7 +28,8 @@
           <button type="primary" class="loginBtn" form-type="submit" disabled="{{dislogin}}">登 录</button>
         </view>
         <view>
-          <button  class="registerBtn" bindtap="handlerregisterbtn">注 册</button>
+          <button  class="registerBtn" open-type="getUserInfo" bindtap="register_simple">注 册</button>
+
         </view>
     </view>
   </form>

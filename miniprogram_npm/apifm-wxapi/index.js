@@ -384,17 +384,6 @@ module.exports = {
   goodsFavList: function goodsFavList(data) {
     return request('/shop/goods/fav/list', true, 'post', data);
   },
-  myBuyGoodsHis: function myBuyGoodsHis(data) {
-    return request('/shop/goods/his/list', true, 'post', data);
-  },
-  myBuyGoodsHisDelete: function myBuyGoodsHisDelete(token) {
-    var id = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '';
-    var goodsId = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : '';
-
-    return request('/shop/goods/his/delete', true, 'post', {
-      token: token, id: id, goodsId: goodsId
-    });
-  },
   goodsFavPut: function goodsFavPut(token, goodsId) {
     return request('/shop/goods/fav/add', true, 'post', {
       token: token, goodsId: goodsId
